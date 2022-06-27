@@ -12,10 +12,14 @@ export function Home() {
                     <div className="px-16 h-full flex-col-center">
                         <div className="h-5/10 flex-col-center gap-2">
                             <h1 className="font-bold mt-24">Planning Poker para desenvolvimento agil de sua equipe.</h1>
-                            <p>Divirta-se enquanto enquanto planeja suas atividade com essa incrível ferramenta.</p>
+                            <p>Divirta-se enquanto planeja suas atividade com essa incrível ferramenta.</p>
                         </div>
                         <div className="h-5/12 flex-col-center">
                             <button className="w-full btn btn-primary" onClick={() => { navigate('/rooms/new') }}>Inicie um novo jogo</button>
+
+                            <div className="separator">ou</div>
+
+                            <span onClick={() => navigate('/rooms/sign-in')} className="link-span">Acessar sala existente</span>
                         </div>
                     </div>
                     <div className="pr-12 h-full flex-center ">
