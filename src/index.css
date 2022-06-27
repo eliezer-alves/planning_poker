@@ -2,47 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fredoka&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fredoka&display=swap");
 
-html, body, #root{
+html,
+body,
+#root {
   @apply h-full;
-  color: #48545D;
+  color: #48545d;
 }
 
 body {
   margin: 0;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 #root {
-  @apply z-0 static
+  @apply z-0 static;
 }
 
-textarea:focus, input:focus, select:focus {
+textarea:focus,
+input:focus,
+select:focus {
   outline: 0;
-} 
+}
 
 h1 {
   @apply text-3xl text-secondary-400 mb-6
   xsm:text-4xl sm:text-5xl md:text-6xl
-  mobile:text-5xl mobile:text-center
+  mobile:text-5xl mobile:text-center;
 }
 
 h2 {
   @apply text-xl text-secondary-400
   xsm:text-2xl md:text-3xl
-  mobile:text-center
+  mobile:text-center;
 }
 
 h3 {
-  @apply text-lg xsm:text-xl
+  @apply text-lg xsm:text-xl;
 }
 
 .info {
-  @apply text-gray-400 text-xl
+  @apply text-gray-400 text-xl;
 }
 
 input {
@@ -55,7 +59,7 @@ input {
   duration-200 ease-in-out
   mobile:text-lg
   mobile:px-2
-  mobile:border-2
+  mobile:border-2;
 }
 
 textarea {
@@ -65,88 +69,95 @@ textarea {
   text-xl
   duration-200 ease-in-out
   mobile:text-lg
-  mobile:px-2
+  mobile:px-2;
 }
 
 /* My custom classes */
+.grid-col-2 {
+  display: grid !important;
+  grid-template-columns: 50% 50% !important;
+}
+
+.grid-col-60-40 {
+  display: grid !important;
+  grid-template-columns: 60% 40% !important;
+}
+
 .flex-center {
-  @apply flex justify-center items-center
+  @apply flex justify-center items-center;
 }
 
 .flex-col-center {
-  @apply flex flex-col justify-center items-center
+  @apply flex flex-col justify-center items-center;
 }
 
 .flex-between {
-  @apply flex justify-between items-center
+  @apply flex justify-between items-center;
 }
 
 .btn-sm {
-  @apply
-  py-1 px-4
+  @apply py-1 px-4
   rounded-md
   text-lg font-semibold
   hover:opacity-70
-  duration-200 ease-in-out
+  duration-200 ease-in-out;
 }
 
 .btn {
-  @apply
-  m-1 py-3 px-8
+  @apply m-1 py-3 px-8
   border-3 border-gray-200 rounded-md
   text-xl font-semibold
   hover:opacity-70
   duration-200 ease-in-out
-  mobile:px-4
+  mobile:px-4;
 }
 
 .btn-primary {
-  @apply bg-primary-300 text-white border-0
+  @apply bg-primary-300 text-white border-0;
 }
 
 .btn-secondary {
   @apply bg-gray-200 text-gray-800 border-0
-  hover:bg-gray-300 hover:opacity-100
+  hover:bg-gray-300 hover:opacity-100;
 }
 
 .btn-dark {
-  @apply 
-  hover:bg-secondary-300 hover:text-white hover:opacity-100
+  @apply hover:bg-secondary-300 hover:text-white hover:opacity-100;
 }
 
 .font-fredoka {
-  font-family: 'Fredoka', sans-serif;;
+  font-family: "Fredoka", sans-serif;
 }
 
 .nav-item {
-  @apply link hover:bg-gray-200
+  @apply link hover:bg-gray-200;
 }
 
 .link {
   @apply hover:cursor-pointer hover:text-secondary-300
-  duration-200 ease-in-out
+  duration-200 ease-in-out;
 }
 
 .link-span {
-  @apply link text-xl text-gray-500 font-semibold font-fredoka hover:opacity-60
+  @apply link text-xl text-gray-500 font-semibold font-fredoka hover:opacity-60;
 }
 
 .main {
-  @apply w-full xsm:w-2/3 px-8 xsm:px-0 flex-col-center
+  @apply w-full xsm:w-2/3 px-8 xsm:px-0 flex-col-center;
 }
 
 .separator {
-  @apply my-4 w-2/3 flex-center text-gray-400 font-fredoka
+  @apply my-4 w-2/3 flex-center text-gray-400 font-fredoka;
 }
 
 .separator::before {
   @apply flex-1 mr-4 bg-gray-400;
-	content: '';
-	height: 1px;
+  content: "";
+  height: 1px;
 }
 
 .separator::after {
   @apply flex-1 ml-4 bg-gray-400;
-	content: '';
-	height: 1px;
+  content: "";
+  height: 1px;
 }

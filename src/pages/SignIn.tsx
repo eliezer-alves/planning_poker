@@ -9,7 +9,7 @@ type OpenRoom = {
 
 type RoomParams = {
     sign_in_code?: string
-  }
+}
 
 export function SignIn() {
     const params = useParams<RoomParams>()
@@ -33,38 +33,40 @@ export function SignIn() {
 
     return (
         <Page>
-            <div className="w-3/5 h-full flex-center">
-                <img src="https://miro.medium.com/max/1400/1*UzlFgnkt2jCe9LbF7-DBTg.gif" width="700px" />
-            </div>
-            <div id="form" className="w-2/5 h-full flex-center">
-                <div className="flex flex-col gap-6">
-                    <div className="flex-col-center gap-2">
-                        <h2>Entrar Numa Sala Existente</h2>
-                        <span>Insira o código da sala existente</span>
+            <div className="h-full w-full grid-60-40 flex justify-around">
+                <div className="h-full flex-center">
+                    <img src="https://miro.medium.com/max/1400/1*UzlFgnkt2jCe9LbF7-DBTg.gif" width="700px" />
+                </div>
+                <div id="form" className="h-full flex-center">
+                    <div className="flex flex-col gap-6">
+                        <div className="flex-col-center gap-2">
+                            <h2>Entrar Numa Sala Existente</h2>
+                            <span>Insira o código da sala existente</span>
+                        </div>
+                        <form onSubmit={(e) => handleEnterRoom(e)} className="flex-col-center">
+                            <input
+                                onChange={(e) => { setKey(e.target.value); }}
+                                type="text"
+                                id="key"
+                                value={key}
+                                placeholder="Digite a chave da sala"
+                                required
+                                className="w-full"
+                            />
+                            <input
+                                onChange={(e) => { setNick(e.target.value); }}
+                                type="text"
+                                id="key"
+                                value={nick}
+                                placeholder="Digite seu Nick"
+                                required
+                                className="w-full"
+                            />
+                            <button type="submit" className="w-full btn btn-primary">Entrar</button>
+                            <div className="separator">ou</div>
+                            <span onClick={() => navigate('/rooms/new')} className="link-span">Criar nova sala</span>
+                        </form>
                     </div>
-                    <form onSubmit={(e) => handleEnterRoom(e)} className="flex-col-center">
-                        <input
-                            onChange={(e) => { setKey(e.target.value); }}
-                            type="text"
-                            id="key"
-                            value={key}
-                            placeholder="Digite a chave da sala"
-                            required
-                            className="w-full"
-                        />
-                        <input
-                            onChange={(e) => { setNick(e.target.value); }}
-                            type="text"
-                            id="key"
-                            value={nick}
-                            placeholder="Digite seu Nick"
-                            required
-                            className="w-full"
-                        />
-                        <button type="submit" className="w-full btn btn-primary">Entrar</button>
-                        <div className="separator">ou</div>
-                        <span onClick={() => navigate('/rooms/new')} className="link-span">Criar nova sala</span>
-                    </form>
                 </div>
             </div>
         </Page>
